@@ -6,7 +6,7 @@ Microservicio REST desarrollado con **FastAPI** y **MongoDB** para la gestión d
 ## Funcionalidades presentadas 
 
 - Crear nuevas tareas
-- Ver todas las tareas
+- Ver todas las tareas  
 - Marcar tareas como completadas
 - Eliminar tareas por ID
 - Conectado a MongoDB 
@@ -21,19 +21,19 @@ Microservicio REST desarrollado con **FastAPI** y **MongoDB** para la gestión d
 
 ### 1. Clonar el repositorio
 
-git clone https://github.com/Romelg18/task-manager-api.git
+git clone https://github.com/Romelg18/task-manager-api.git  
 cd task-manager-api
 
 ## 2. Crear y activar el entorno virtual 
-python -m venv venv
+python -m venv venv  
 .\venv\Scripts\activate
 
 ## 3. Instalar dependencias
 pip install -r requirements.txt
 
 ## 4. Configurar archivo .env (MUY IMPORTANTE)
-Crear un archivo .env en la carpeta raiz  que contenga: 
-MONGO_URI=mongodb://localhost:27017
+Crear un archivo .env en la carpeta raiz  que contenga:  
+MONGO_URI=mongodb://localhost:27017  
 DATABASE_NAME=taskdb
 
 ## 5. Ejecutar el servidor 
@@ -43,10 +43,10 @@ uvicorn app.main:app --reload
 
 
 ## EJECUCION OPCIONAL
--Adicionalmente se hizo un dockerfile en caso de querer ejecutar con docker para eso tendriamos que cambiar el.env
-MONGO_URI=mongodb://host.docker.internal:27017
-DATABASE_NAME=taskdb
--Construir la imagen 
-docker build -t task-manager-api .
--Y ejecutar el contenedor 
+-Adicionalmente se hizo un dockerfile en caso de querer ejecutar con docker para eso tendriamos que cambiar el.env  
+MONGO_URI=mongodb://host.docker.internal:27017  
+DATABASE_NAME=taskdb  
+-Construir la imagen  
+docker build -t task-manager-api .  
+-Y ejecutar el contenedor   
 docker run -d -p 8000:8000 --env-file .env task-manager-api
